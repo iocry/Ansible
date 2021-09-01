@@ -1,0 +1,7 @@
+
+---
+- name: Install apache2 and upload my web page
+  hosts: all
+
+  roles:
+    - deploy_apache

@@ -1,0 +1,16 @@
+
+---
+- name: playbook include
+  hosts: all
+
+  vars:
+   mytext: "privet from iocry" 
+
+  tasks:
+  - name: ping test
+    ping:
+
+  - include: create_folders.yml
+
+  - include: create_files.yml
+

@@ -1,0 +1,19 @@
+
+---
+- name: reboot and waiting
+  hosts: all
+
+  tasks:
+
+
+  - name: reboot my server
+    reboot:
+
+  - name: waiting to server up
+    wait_for:
+          host: "{{ inventory_hostname  }}" 
+          state: started
+          delay: 5
+          timeout: 60
+    delegate_to: localhost
+
